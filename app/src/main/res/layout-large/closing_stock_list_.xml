@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/table_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/lin"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="sdsd"
+            android:id="@+id/list_d1"
+            android:background="@drawable/edit_text_border"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+             android:textSize="18dp"
+            android:layout_weight="1.6"
+            android:textColor="@color/blackcolour"
+            android:gravity="center"/>
+        <TextView
+            android:text="sdsd"
+            android:id="@+id/list_d2"
+            android:background="@drawable/edit_text_border"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+             android:textSize="18dp"
+            android:layout_weight="1"
+            android:textColor="@color/blackcolour"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/list_d3"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+             android:textSize="18dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/edit_text_border"
+            android:gravity="center"
+            android:text="ss"
+            android:textColor="@color/blackcolour"
+             />
+
+        <TextView
+            android:id="@+id/list_d4"
+            android:text="ss"
+            android:background="@drawable/edit_text_border"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+             android:textSize="18dp"
+            android:layout_weight="0.8"
+            android:textColor="@color/blackcolour"
+            android:gravity="center"/>
+
+        <TextView
+            android:text="sss"
+            android:id="@+id/list_d5"
+            android:background="@drawable/edit_text_border"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/blackcolour"
+            android:layout_height="45dp"
+             android:textSize="18dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

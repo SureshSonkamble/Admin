@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+    <include layout="@layout/tolbar"/>
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pgb"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:padding="05dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="#000000"
+                android:text="From"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:text="ss"
+                android:textColor="@color/blackcolour"
+                android:background="@drawable/edittextborder_new"
+                android:id="@+id/edt_frm_date"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:textColor="#000000"
+                android:text="To"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:text="ss"
+                android:textColor="@color/blackcolour"
+                android:background="@drawable/edittextborder_new"
+                android:id="@+id/edt_to_date"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/btn_report"
+                android:text="Proceed"
+                android:textColor="#ffffff"
+                android:background="@drawable/edittext_border"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="05dp"
+            android:background="@color/red"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_marginTop="05dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+
+                android:id="@+id/lin_add_view"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- <TextView
+                             android:text="Bar Code"
+                             android:textColor="#ffffff"
+                             android:background="@drawable/edittext_border"
+                             android:layout_width="125dp"
+                             android:layout_height="30dp"
+                             android:gravity="center"/>-->
+                        <TextView
+                            android:text="Ch. No"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/edittext_border"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:text="Doc date"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/edittext_border"
+                            android:layout_width="85dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:text="Supplier"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/edittext_border"
+                            android:layout_width="140dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:text="Plac Desc"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/edittext_border"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"/>
+                         <TextView
+                             android:text="Amount"
+                             android:textColor="#ffffff"
+                             android:background="@drawable/edittext_border"
+                             android:layout_width="70dp"
+                             android:layout_height="30dp"
+                             android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_bill_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginTop="05dp" />
+                    <View
+                        android:layout_marginTop="02dp"
+                        android:background="@color/red"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/lin_heading_hide"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                          <TextView
+                              android:text="Item Name"
+                              android:textColor="#ffffff"
+                              android:background="@drawable/edittext_border"
+                              android:layout_width="125dp"
+                              android:layout_height="30dp"
+                              android:gravity="center"/>
+                        <TextView
+                            android:text="Size"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/edittext_border"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:text="Case Qty"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/edittext_border"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:text="Bottle Qty."
+                            android:textColor="#ffffff"
+                            android:background="@drawable/edittext_border"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:text="M.R.P"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/edittext_border"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_swap_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginTop="05dp" />
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lin_hide"
+                        android:padding="02dp"
+                        android:layout_marginTop="02dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#000000"
+                            android:text="Paid  Amount "
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                        <EditText
+
+                            android:inputType="number|numberDecimal"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginLeft="05dp"
+                            android:id="@+id/edt_paid_amt"
+                            android:background="@drawable/edittextborder_new"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"/>
+                        <TextView
+                            android:layout_marginLeft="05dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:textColor="#000000"
+                            android:text="Bal Amount :"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                        <EditText
+                            android:enabled="false"
+                            android:inputType="number|numberDecimal"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginLeft="05dp"
+                            android:id="@+id/edt_bal_amt"
+                            android:background="@drawable/edittextborder_new"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="02dp"
+                        android:background="@color/red"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:padding="05dp"
+                        android:gravity="start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="05dp"
+                            android:id="@+id/txt_back"
+                            android:text="Back"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/edittext_border"
+                            android:layout_width="150dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>

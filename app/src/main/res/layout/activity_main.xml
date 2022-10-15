@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="Select Date" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimary"
+                android:text="From Date"
+                android:layout_width="130dp"
+                android:layout_height="35dp" />
+
+            <EditText
+                android:id="@+id/edt_frm_date"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:textStyle="bold"
+                android:hint="0" />
+            <ImageView
+                android:id="@+id/img_frm_date"
+                android:src="@drawable/calendar"
+                android:layout_width="50dp"
+                android:layout_height="35dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimary"
+                android:id="@+id/btn_close_time"
+                android:text="To Date"
+                android:layout_width="130dp"
+                android:layout_height="35dp" />
+
+            <EditText
+                android:id="@+id/edt_to_date"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:textStyle="bold"
+                android:hint="0" />
+
+            <ImageView
+                android:id="@+id/img_to_date"
+                android:src="@drawable/calendar"
+                android:layout_width="50dp"
+                android:layout_height="35dp"/>
+
+        </LinearLayout>
+        <Button
+            android:layout_marginTop="20dp"
+           android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:text="Proceed"
+            android:layout_width="130dp"
+            android:layout_height="35dp" />
+        <View
+            android:layout_marginTop="05dp"
+            android:background="@color/red"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Select day" />
+        <Spinner
+            android:id="@+id/sp_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />-->
+
+    </LinearLayout>
+</LinearLayout>

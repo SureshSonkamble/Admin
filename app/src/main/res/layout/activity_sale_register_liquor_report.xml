@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/toolbar"/>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pgb"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lin_heading_hide"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Sr.No"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:text="Name Of The Item"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:text="Size"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center"
+                    android:text="Qty"
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center"
+                    android:text="From Size"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="05dp"
+                android:id="@+id/recycler_bill_list"
+                android:layout_width="match_parent"
+                android:layout_height="465dp"
+                />
+
+            <View
+                android:layout_marginTop="02dp"
+                android:background="@color/red"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"/>
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Total"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/txt_imfl_total"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"/>
+                <!--  <TextView
+                      android:text="Size Code"
+                      android:textColor="#ffffff"
+                      android:background="@drawable/edittext_border"
+                      android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="35dp"
+                      android:gravity="center"/>-->
+
+
+                <TextView
+                    android:id="@+id/txt_country_total"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/txt_beer_strong_total"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center"
+                    android:textColor="#ffffff" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>

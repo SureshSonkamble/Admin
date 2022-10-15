@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pgb"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="Select Date" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:textColor="#ffffff"
+                android:background="@drawable/edittext_border"
+                android:text="From Date"
+                android:layout_width="130dp"
+              android:layout_height="40dp" />
+
+            <TextView
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/edittextborder_new"
+                android:id="@+id/edt_frm_date"
+                android:layout_width="120dp"
+              android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                />
+            <!-- <ImageView
+                 android:id="@+id/img_frm_date"
+                 android:src="@drawable/calendar"
+                 android:layout_width="50dp"
+               android:layout_height="40dp"/>-->
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="05dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_close_time"
+                android:layout_width="130dp"
+              android:layout_height="40dp"
+                android:background="@drawable/edittext_border"
+                android:text="To Date"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/edittextborder_new"
+                android:id="@+id/edt_to_date"
+                android:layout_width="120dp"
+              android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                />
+
+            <!--   <ImageView
+                   android:id="@+id/img_to_date"
+                   android:src="@drawable/calendar"
+                   android:layout_width="50dp"
+                 android:layout_height="40dp"/>-->
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_proceed"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/edittext_border"
+            android:text="Proceed"
+            android:layout_width="130dp"
+          android:layout_height="40dp" />
+        <View
+            android:layout_marginTop="05dp"
+            android:background="@color/red"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Select day" />
+        <Spinner
+            android:id="@+id/sp_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="0.9"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Items"
+                                android:textColor="#ffffff"
+                                android:background="@drawable/edittext_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                              android:layout_height="40dp"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:text="Action"
+                                android:textColor="#ffffff"
+                                android:background="@drawable/edittext_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.75"
+                              android:layout_height="40dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_marginTop="05dp"
+                            android:id="@+id/recycler_bill_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            />
+                        <View
+                            android:layout_marginTop="05dp"
+                            android:background="@color/red"
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  <ProgressBar
+                      android:visibility="gone"
+                      android:id="@+id/progressBar"
+                      style="?android:attr/progressBarStyleHorizontal"
+                      android:layout_width="match_parent"
+                      android:layout_height="2dp"
+                      android:layout_alignParentLeft="true"
+                      android:layout_alignParentTop="true"
+                      android:layout_marginTop="0dp"
+                      android:indeterminate="false"
+                      android:max="100"
+                      android:minHeight="50dp"
+                      android:minWidth="200dp"
+                      android:progress="1" />-->
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:id="@+id/progressBar_cyclic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:minWidth="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <!--<TextView
+                    android:visibility="gone"
+                    android:textColor="@color/colorPrimary"
+                    android:text="ss"
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/progressBar"
+                    android:layout_below="@+id/progressBar"/>
+-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:visibility="gone"
+                        android:padding="02dp"
+                        android:id="@+id/btn_check_all"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/edittext_border"
+                        android:text="Check All"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                      android:layout_height="40dp"/>
+                    <Button
+                        android:visibility="gone"
+                        android:padding="02dp"
+                        android:id="@+id/btn_uncheck_all"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/edittext_border"
+                        android:text="UnCheck All"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                      android:layout_height="40dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+                        android:layout_marginTop="05dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Items"
+                                android:textColor="#ffffff"
+                                android:background="@drawable/edittext_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                              android:layout_height="40dp"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:text="Action"
+                                android:textColor="#ffffff"
+                                android:background="@drawable/edittext_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.75"
+                              android:layout_height="40dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_marginTop="05dp"
+                            android:id="@+id/recycler_swap_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            />
+                        <View
+                            android:background="@color/red"
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"/>
+                        <!--   <LinearLayout
+                               android:layout_marginTop="02dp"
+                               android:orientation="horizontal"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content">
+                               <Button
+                                   android:visibility="invisible"
+                                   android:id="@+id/btn_swap"
+                                   android:background="@drawable/edittext_border"
+                                   android:text="Swap"
+                                   android:textAllCaps="false"
+                                   android:layout_marginLeft="20dp"
+                                   android:gravity="center"
+                                   android:textColor="#ffffff"
+                                   android:layout_width="wrap_content"
+                                 android:layout_height="40dp"/>
+                               <Button
+                                   android:padding="02dp"
+                                   android:visibility="invisible"
+                                   android:id="@+id/btn_unshift"
+                                   android:layout_marginLeft="170dp"
+                                   android:background="@drawable/edittext_border"
+                                   android:text="Unshift All"
+                                   android:textAllCaps="false"
+                                   android:gravity="center"
+                                   android:textColor="#ffffff"
+                                   android:layout_width="wrap_content"
+                                 android:layout_height="40dp"/>
+                           </LinearLayout>-->
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/lin_radio_hide"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_marginTop="02dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:text="Stock In"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    />
+                                <RadioGroup
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/radioGroup">
+
+                                    <RadioButton
+                                        android:id="@+id/radio_bottle"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bottles"
+                                        android:checked="false"
+                                        />
+
+                                    <RadioButton
+                                        android:id="@+id/radio_cases"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Cases"
+                                        android:checked="false"
+                                        />
+                                </RadioGroup>
+                                <Button
+                                    android:layout_marginLeft="05dp"
+                                    android:id="@+id/btn_report"
+                                    android:layout_marginTop="02dp"
+                                    android:layout_gravity="center"
+                                    android:textColor="#ffffff"
+                                    android:background="@drawable/edittext_border"
+                                    android:text="Report"
+                                    android:layout_width="130dp"
+                                    android:layout_height="45dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

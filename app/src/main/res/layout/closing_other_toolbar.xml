@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" >
+       <LinearLayout
+           android:layout_marginRight="20dp"
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:text="title"
+                android:textSize="18dp"
+                android:textStyle="bold"
+
+                android:layout_height="wrap_content" />
+           <View
+               android:background="#ffffff"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"/>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <TextView
+                   android:textColor="#ffffff"
+                   android:layout_width="0dp"
+                   android:layout_weight="1.1"
+                   android:text="As On :"
+                   android:textSize="18dp"
+                   android:textStyle="bold"
+                   android:layout_height="match_parent" />
+               <TextView
+                   android:id="@+id/toolbar_to_date"
+                   android:layout_width="0dp"
+                   android:layout_weight="5.1"
+                   android:text="title"
+                   android:textSize="18dp"
+                   android:textStyle="bold"
+                   android:layout_height="match_parent" />
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <TextView
+                   android:textColor="#ffffff"
+                   android:layout_width="0dp"
+                   android:layout_weight="1.5"
+                   android:text="Location :"
+                   android:textSize="18dp"
+                   android:textStyle="bold"
+                   android:layout_height="match_parent" />
+               <TextView
+                   android:id="@+id/toolbar_location"
+                   android:layout_width="0dp"
+                   android:layout_weight="5.1"
+                   android:text="title"
+                   android:textSize="18dp"
+                   android:textStyle="bold"
+                   android:layout_height="match_parent" />
+
+           </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+    <include layout="@layout/tolbar"/>
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pgb"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:padding="02dp"
+        android:layout_marginTop="02dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="05dp"
+            android:textColor="#000000"
+            android:text="As On"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginLeft="05dp"
+            android:id="@+id/edt_date"
+            android:background="@drawable/edittextborder_new"
+            android:layout_width="120dp"
+            android:layout_height="35dp"/>
+        <!-- <EditText
+             android:inputType="number"
+             android:id="@+id/edt_data"
+             android:layout_marginLeft="05dp"
+             android:background="@drawable/edittextborder_new"
+             android:layout_width="70dp"
+             android:layout_height="35dp"/>-->
+
+    </LinearLayout>
+    <View
+        android:background="#9A9494"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <LinearLayout
+        android:padding="02dp"
+        android:id="@+id/lin_frm_loc"
+        android:layout_marginTop="02dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:text="Cust. Name:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <Spinner
+            android:layout_marginLeft="05dp"
+            android:background="@drawable/edittextborder_new"
+            android:id="@+id/sp_customer"
+            android:layout_width="280dp"
+            android:layout_height="35dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="02dp"
+        android:background="#9A9494"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <View
+        android:layout_marginTop="02dp"
+        android:background="#9A9494"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <LinearLayout
+        android:padding="02dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="Search Brand :   "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <SearchView
+            android:id="@+id/report_searchView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="textCapCharacters"
+            android:queryHint="Enter Brand Name"
+            android:textAllCaps="true" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_marginTop="05dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="BRAND"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="125dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="SIZE"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="CASE QTY."
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="BARCODE"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"/>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_bill_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="05dp" />
+
+                <View
+                    android:layout_marginTop="02dp"
+                    android:background="@color/red"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+    <ScrollView
+        android:layout_marginTop="05dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/lin_heading_hide"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="BRAND"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="125dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="SIZE"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="CASE QTY."
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="BTL.QTY"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="MRP"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"/>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_swap_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="05dp" />
+
+                <View
+                    android:layout_marginTop="02dp"
+                    android:background="@color/red"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"/>
+
+                <View
+                    android:layout_marginTop="02dp"
+                    android:background="#9A9494"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+                <LinearLayout
+                    android:padding="02dp"
+                    android:layout_marginTop="02dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#000000"
+                        android:text="Add Amount  "
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <EditText
+                        android:inputType="number|numberDecimal"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="05dp"
+                        android:id="@+id/edt_add_amt"
+                        android:background="@drawable/edittextborder_new"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"/>
+                    <TextView
+                        android:layout_marginLeft="05dp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="#000000"
+                        android:text="Net Sale :       "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <EditText
+                        android:enabled="false"
+                        android:inputType="number|numberDecimal"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="05dp"
+                        android:id="@+id/edt_net_sale"
+                        android:background="@drawable/edittextborder_new"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_marginTop="02dp"
+                    android:background="#9A9494"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:padding="05dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="05dp"
+                        android:id="@+id/txt_cancel"
+                        android:text="Cancel"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/txt_save"
+                        android:layout_width="120dp"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="center"
+                        android:text="Update"
+                        android:textColor="#ffffff" />
+                    <TextView
+                        android:id="@+id/txt_delete"
+                        android:layout_width="120dp"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="center"
+                        android:text="Delete"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>
